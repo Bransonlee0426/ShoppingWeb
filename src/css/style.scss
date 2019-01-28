@@ -1,0 +1,42 @@
+@import "../css/reset";
+@mixin hide-text {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@mixin clearfix {
+  clear: both;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  background: green;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: red;
+  
+  .logo {
+    display: inline-block;
+    display: flex;
+    flex :1 0 0%;
+    padding: 10px 15px;
+    background-color: gold;
+  }
+  .nav_links {
+    display: inline-block;
+    padding:10px 15px;
+    flex :1 0 0%;
+    right: 0;
+    display: flex;
+    background-color: aquamarine;
+    a{
+      padding: 10px 15px;
+    }
+  }
+}
