@@ -53,15 +53,19 @@ table {
 }
 
 /*----------------CSSreset------------------*/
+body {
+  font-family: "PT Serif", serif;
+}
+
 .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: blue;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: green;
 }
 
 nav {
@@ -77,35 +81,52 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: red;
+  background: darkgrey;
+  padding: 8px 15px;
 }
 
 nav .logo {
-  display: inline-block;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
-  padding: 10px 15px;
-  background-color: gold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-left: 20px;
+  width: 100px;
+  height: 68px;
+  background-repeat: no-repeat;
+  background-image: url("../images/logo.png");
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 nav .nav_links {
-  display: inline-block;
-  padding: 10px 15px;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 0%;
-          flex: 1 0 0%;
-  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  background: aquamarine;
+  font-size: 15px;
+  color: #504e4a;
+}
+
+nav .nav_links :visited {
+  color: #504e4a;
+}
+
+nav .nav_links .hvr-underline-reveal:before {
+  background: #504e4a !important;
+  height: 2px !important;
+}
+
+nav .nav_links .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: aquamarine;
-}
-
-nav .nav_links a {
-  padding: 10px 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 5px;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

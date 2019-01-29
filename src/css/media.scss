@@ -1,0 +1,23 @@
+// $iPad-media:768px;
+$iPad-media:767px; //iPad以下
+$iPhone6plus-media:414px; //(視專案族群)
+$iPhone6-media:375px; //(視專案族群)
+$iPhone5-media:320px;
+
+@mixin iPad_max-width() {
+    @media all and (max-width: $iPad-media) {
+        @content;
+    }
+}
+
+@mixin iPad_min-width() {
+    @media all and (min-width: $iPad-media) {
+        @content;
+    }
+}
+
+@mixin mobile() {
+    @media all and (max-width: $iPad-media) and (min-width: $iPhone5-media) {
+        @content;
+    }
+}

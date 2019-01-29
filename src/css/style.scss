@@ -1,17 +1,16 @@
 @import "../css/reset";
-@mixin hide-text {
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-@mixin clearfix {
-  clear: both;
+@import "../css/media.scss";
+@import "../css/regular.scss";
+
+
+body {
+  font-family: "PT Serif", serif;
 }
 
 .wrap {
   display: flex;
+  background: blue; 
   flex-direction: column;
-  background: green;
 }
 
 nav {
@@ -19,24 +18,45 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: red;
+  background: darkgrey;
+  padding: 8px 15px;
   
   .logo {
-    display: inline-block;
-    display: flex;
-    flex :1 0 0%;
-    padding: 10px 15px;
-    background-color: gold;
+    display: inline-flex;
+    margin-left: 20px;
+    width: 100px;
+    height: 68px;
+    background-repeat: no-repeat;
+    background-image: url("../images/logo.png");
+    @include hide-text();
   }
+ 
   .nav_links {
-    display: inline-block;
-    padding:10px 15px;
-    flex :1 0 0%;
-    right: 0;
-    display: flex;
-    background-color: aquamarine;
-    a{
-      padding: 10px 15px;
+    align-items: center;
+    display: inline-flex;
+    background: aquamarine;
+    font-size: 15px;
+    color: #504e4a;
+    @include mobile() {
+      
+    }
+    
+    :visited {
+      color: #504e4a;
+    }
+
+    .hvr-underline-reveal:before {
+      background: #504e4a !important;
+      height: 2px !important;
+    }
+
+    .item {
+      display: flex;
+      margin-left: 50px;
+      margin-right: 50px;
+      padding: 5px;
+      text-decoration: none;
     }
   }
+  
 }
