@@ -54,6 +54,74 @@ table {
 }
 
 /*----------------CSSreset------------------*/
+/* Icon 4 */
+@media all and (min-width: 768px) {
+  #showmenu {
+    display: none;
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  #showmenu {
+    width: 60px;
+    height: 45px;
+    top: 10px;
+    padding-left: 10px auto;
+    padding-top: 10px auto;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+  #showmenu span {
+    left: 10px;
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: black;
+    border-radius: 9px;
+    opacity: 50;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
+  }
+  #showmenu span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #showmenu span:nth-child(2) {
+    top: 12px;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #showmenu span:nth-child(3) {
+    top: 24px;
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  #showmenu.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -5px;
+    left: 15px;
+  }
+  #showmenu.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+  #showmenu.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 24px;
+    left: 15px;
+  }
+}
+
 body {
   font-family: "PT Serif", serif;
 }
@@ -71,7 +139,7 @@ body {
 
 /*jQ點擊後動態在 body 加上 class */
 .menu-show .nav_links {
-  max-height: 240px;
+  max-height: 248px;
 }
 
 nav {
@@ -108,23 +176,7 @@ nav .logo {
   white-space: nowrap;
 }
 
-nav .showmenu {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 48px;
-  height: 48px;
-  background-image: url("../images/hamburger.png");
-  background-repeat: no-repeat;
-}
-
-@media all and (min-width: 768px) {
-  nav .showmenu {
-    display: none;
-  }
-}
-
-nav .nav_links {
+.nav_links {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -134,7 +186,7 @@ nav .nav_links {
 }
 
 @media all and (max-width: 767px) and (min-width: 320px) {
-  nav .nav_links {
+  .nav_links {
     /*隱藏選單開始*/
     max-height: 0px;
     overflow: hidden;
@@ -149,10 +201,9 @@ nav .nav_links {
     top: 83px;
     left: 0;
     right: 0;
-    background: darkcyan;
     display: block;
   }
-  nav .nav_links .item {
+  .nav_links .item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -163,11 +214,12 @@ nav .nav_links {
     max-width: auto;
     height: 60px;
     padding-left: 40px;
+    border-bottom: black solid 1px;
   }
 }
 
 @media all and (min-width: 768px) {
-  nav .nav_links .item {
+  .nav_links .item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -178,11 +230,11 @@ nav .nav_links {
   }
 }
 
-nav .nav_links :visited {
+.nav_links :visited {
   color: #504e4a;
 }
 
-nav .nav_links .hvr-underline-reveal:before {
+.nav_links .hvr-underline-reveal:before {
   background: #504e4a !important;
   height: 2px !important;
 }

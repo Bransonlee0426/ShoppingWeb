@@ -13,8 +13,12 @@ $(document).ready(function () {
       }
     }
     //showmenu
-    $('.showmenu').on('click', function (e) {
+    $('#showmenu').on('click', function (e) {
         e.preventDefault();
         $('body').toggleClass('menu-show');
     });
+    //navbar icon animation
+    $('#showmenu').click(function(){
+		$(this).toggleClass('open');
+	});
 });

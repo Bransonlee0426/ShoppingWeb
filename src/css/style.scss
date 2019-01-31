@@ -2,7 +2,9 @@
 @import "../css/media.scss";
 @import "../css/regular.scss";
 
+/* Icon 4 */
 
+}
 body {
   font-family: "PT Serif", serif;
 }
@@ -15,12 +17,12 @@ body {
 }
 
 .colorr .dd {
-  background: red
+  background: red;
 }
 
 /*jQ點擊後動態在 body 加上 class */
 .menu-show .nav_links {
-  max-height: 240px;
+  max-height: 248px;
 }
 
 nav {
@@ -41,72 +43,146 @@ nav {
     background-image: url("../images/logo.png");
     @include hide-text();
   }
+}
 
-  .showmenu {
-    display: inline-flex;
-    width: 48px;
-    height: 48px;
-    background-image: url("../images/hamburger.png");
-    background-repeat: no-repeat;
+.nav_links {
+  display: inline-flex;
+  background: aquamarine;
+  font-size: 15px;
+  color: #504e4a;
 
-    @include iPad_min-width() {
+  @include mobile() {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    transition: max-height 0.5s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    /*header 80px+1px boder 線條*/
+    max-width: auto;
+    top: 83px;
+    left: 0;
+    right: 0;
+    display: block;
+
+    .item {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      max-width: auto;
+      height: 60px;
+      padding-left: 40px;
+      border-bottom: black solid 1px;
+    }
+  }
+
+  @include iPad_min-width() {
+    .item {
+      display: flex;
+      margin-left: 50px;
+      margin-right: 20px;
+      padding: 20px;
+      text-decoration: none;
+    }
+  }
+
+  :visited {
+    color: #504e4a;
+  }
+
+  .hvr-underline-reveal:before {
+    background: #504e4a !important;
+    height: 2px !important;
+  }
+  @include iPad_min-width() {
+    #showmenu {
       display: none;
     }
   }
-
-  .nav_links {
-    display: inline-flex;
-    background: aquamarine;
-    font-size: 15px;
-    color: #504e4a;
-
-    @include mobile() {
-      /*隱藏選單開始*/
-      max-height: 0px;
-      overflow: hidden;
-      /*隱藏選單結束*/
-      transition: max-height 0.5s;
-      margin-top: 1px;
-      /*絕對定位疊在網頁上*/
-      position: absolute;
-      /*header 80px+1px boder 線條*/
-      max-width: auto;
-      top: 83px;
-      left: 0;
-      right: 0;
-      background: darkcyan;
+  @include mobile() {
+    #showmenu {
+      width: 60px;
+      height: 45px;
+      top: 10px;
+      padding-left: 10px auto;
+      padding-top: 10px auto;
+      position: relative;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.5s ease-in-out;
+      -moz-transition: 0.5s ease-in-out;
+      -o-transition: 0.5s ease-in-out;
+      transition: 0.5s ease-in-out;
+      cursor: pointer;
+    }
+  
+    #showmenu span {
+      left: 10px;
       display: block;
-
-      .item {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        max-width: auto;
-        height: 60px;
-        padding-left: 40px;
-      }
+      position: absolute;
+      height: 3px;
+      width: 40px;
+      background: black;
+      border-radius: 9px;
+      opacity: 50;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
     }
-
-    @include iPad_min-width() {
-      .item {
-        display: flex;
-        margin-left: 50px;
-        margin-right: 20px;
-        padding: 20px;
-        text-decoration: none;
-      }
+  
+    #showmenu span:nth-child(1) {
+      top: 0px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
     }
-
-    :visited {
-      color: #504e4a;
+  
+    #showmenu span:nth-child(2) {
+      top: 12px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
     }
-
-    .hvr-underline-reveal:before {
-      background: #504e4a !important;
-      height: 2px !important;
+  
+    #showmenu span:nth-child(3) {
+      top: 24px;
+      -webkit-transform-origin: left center;
+      -moz-transform-origin: left center;
+      -o-transform-origin: left center;
+      transform-origin: left center;
     }
-
-
-  }
-
+  
+    #showmenu.open span:nth-child(1) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: -5px;
+      left: 15px;
+    }
+  
+    #showmenu.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0;
+    }
+  
+    #showmenu.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 24px;
+      left: 15px;
+    }
 }
