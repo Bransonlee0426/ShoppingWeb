@@ -8,9 +8,19 @@ body {
 }
 
 .wrap {
-  display: flex;
-  background: blue; 
-  flex-direction: column;
+  background: blue;
+  max-width: auto;
+  max-height: auto;
+  position: relative;
+}
+
+.colorr .dd {
+  background: red
+}
+
+/*jQ點擊後動態在 body 加上 class */
+.menu-show .nav_links {
+  max-height: 240px;
 }
 
 nav {
@@ -18,9 +28,10 @@ nav {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   background: darkgrey;
   padding: 8px 15px;
-  
+
   .logo {
     display: inline-flex;
     margin-left: 20px;
@@ -30,17 +41,62 @@ nav {
     background-image: url("../images/logo.png");
     @include hide-text();
   }
- 
+
+  .showmenu {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    background-image: url("../images/hamburger.png");
+    background-repeat: no-repeat;
+
+    @include iPad_min-width() {
+      display: none;
+    }
+  }
+
   .nav_links {
-    align-items: center;
     display: inline-flex;
     background: aquamarine;
     font-size: 15px;
     color: #504e4a;
+
     @include mobile() {
-      
+      /*隱藏選單開始*/
+      max-height: 0px;
+      overflow: hidden;
+      /*隱藏選單結束*/
+      transition: max-height 0.5s;
+      margin-top: 1px;
+      /*絕對定位疊在網頁上*/
+      position: absolute;
+      /*header 80px+1px boder 線條*/
+      max-width: auto;
+      top: 83px;
+      left: 0;
+      right: 0;
+      background: darkcyan;
+      display: block;
+
+      .item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        max-width: auto;
+        height: 60px;
+        padding-left: 40px;
+      }
     }
-    
+
+    @include iPad_min-width() {
+      .item {
+        display: flex;
+        margin-left: 50px;
+        margin-right: 20px;
+        padding: 20px;
+        text-decoration: none;
+      }
+    }
+
     :visited {
       color: #504e4a;
     }
@@ -50,13 +106,7 @@ nav {
       height: 2px !important;
     }
 
-    .item {
-      display: flex;
-      margin-left: 50px;
-      margin-right: 50px;
-      padding: 5px;
-      text-decoration: none;
-    }
+
   }
-  
+
 }

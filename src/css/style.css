@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -58,14 +59,19 @@ body {
 }
 
 .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background: blue;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  max-width: auto;
+  max-height: auto;
+  position: relative;
+}
+
+.colorr .dd {
+  background: red;
+}
+
+/*jQ點擊後動態在 body 加上 class */
+.menu-show .nav_links {
+  max-height: 240px;
 }
 
 nav {
@@ -81,6 +87,9 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: darkgrey;
   padding: 8px 15px;
 }
@@ -99,16 +108,74 @@ nav .logo {
   white-space: nowrap;
 }
 
+nav .showmenu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 48px;
+  height: 48px;
+  background-image: url("../images/hamburger.png");
+  background-repeat: no-repeat;
+}
+
+@media all and (min-width: 768px) {
+  nav .showmenu {
+    display: none;
+  }
+}
+
 nav .nav_links {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   background: aquamarine;
   font-size: 15px;
   color: #504e4a;
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  nav .nav_links {
+    /*隱藏選單開始*/
+    max-height: 0px;
+    overflow: hidden;
+    /*隱藏選單結束*/
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+    margin-top: 1px;
+    /*絕對定位疊在網頁上*/
+    position: absolute;
+    /*header 80px+1px boder 線條*/
+    max-width: auto;
+    top: 83px;
+    left: 0;
+    right: 0;
+    background: darkcyan;
+    display: block;
+  }
+  nav .nav_links .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    max-width: auto;
+    height: 60px;
+    padding-left: 40px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  nav .nav_links .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 20px;
+    padding: 20px;
+    text-decoration: none;
+  }
 }
 
 nav .nav_links :visited {
@@ -118,15 +185,5 @@ nav .nav_links :visited {
 nav .nav_links .hvr-underline-reveal:before {
   background: #504e4a !important;
   height: 2px !important;
-}
-
-nav .nav_links .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 5px;
-  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
