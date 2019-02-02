@@ -3,11 +3,6 @@
 @import "../css/regular.scss";
 
 /* Icon 4 */
-@include iPad_min-width() {
-  #showmenu {
-    display: none;
-  }
-}
 @include mobile() {
   #showmenu {
     width: 60px;
@@ -93,11 +88,19 @@
     left: 15px;
   }
 }
+
+@include iPad_min-width() {
+  #showmenu {
+    display: none;
+  }
+}
+
 body {
   font-family: "PT Serif", serif;
 }
 
 .wrap {
+  background: blue;
   max-width: auto;
   max-height: auto;
   position: relative;
@@ -116,8 +119,8 @@ nav {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: darkgrey;
   padding: 8px 15px;
 
@@ -166,6 +169,11 @@ nav {
     }
   }
 
+  .hvr-underline-reveal:before {
+    background: #504e4a !important;
+    height: 2px !important;
+  }
+
   @include iPad_min-width() {
     .item {
       display: flex;
@@ -175,9 +183,11 @@ nav {
       text-decoration: none;
     }
   }
+
   :visited {
     color: #504e4a;
   }
+
   .hvr-underline-reveal:before {
     background: #504e4a !important;
     height: 2px !important;

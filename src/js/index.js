@@ -1,9 +1,9 @@
 $(document).ready(function () {
+
   //Listeing media to fix the hover effect.
   let CurWidth = window.matchMedia("(max-width: 767px)");
   CurWidth.addListener(resizeWidth);
   resizeWidth(CurWidth);
-
   function resizeWidth(pMatchMedia) {
     if (pMatchMedia.matches) {
       $('.item').removeClass('hvr-underline-reveal');
@@ -21,11 +21,11 @@ $(document).ready(function () {
     $(this).toggleClass('open');
   });
   let mySwiper = new Swiper('.swiper-container', {
-    
+
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    
+
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
@@ -43,4 +43,5 @@ $(document).ready(function () {
       crossFade: true,
     },
   })
+
 });

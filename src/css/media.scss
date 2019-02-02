@@ -1,5 +1,5 @@
-$iPad-media:768px;
-$iPad-media2:767px; //iPad以下
+// $iPad-media:768px;
+$iPad-media:767px; //iPad以下
 $iPhone6plus-media:414px; //(視專案族群)
 $iPhone6-media:375px; //(視專案族群)
 $iPhone5-media:320px;
@@ -17,7 +17,7 @@ $iPhone5-media:320px;
 }
 
 @mixin mobile() {
-    @media all and (max-width: $iPad-media2) and (min-width: $iPhone5-media) {
+    @media all and (max-width: $iPad-media) and (min-width: $iPhone5-media) {
         @content;
     }
 }
