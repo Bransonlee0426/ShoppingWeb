@@ -127,7 +127,6 @@ body {
 }
 
 .wrap {
-  background: blue;
   max-width: auto;
   max-height: auto;
   position: relative;
@@ -195,6 +194,7 @@ nav .logo {
     transition: max-height 0.5s;
     margin-top: 1px;
     /*絕對定位疊在網頁上*/
+    z-index: 100;
     position: absolute;
     /*header 80px+1px boder 線條*/
     max-width: auto;
@@ -237,5 +237,23 @@ nav .logo {
 .nav_links .hvr-underline-reveal:before {
   background: #504e4a !important;
   height: 2px !important;
+}
+
+.swiper-container {
+  max-height: 700px;
+}
+
+.swiper-container .swiper-slide {
+  position: relative;
+}
+
+.swiper-container h2 {
+  z-index: 10;
+  position: absolute;
+}
+
+.swiper-container img {
+  -webkit-filter: brightness(0.8);
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
