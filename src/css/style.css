@@ -239,21 +239,31 @@ nav .logo {
   height: 2px !important;
 }
 
-.swiper-container {
-  max-height: 700px;
-}
-
 .swiper-container .swiper-slide {
+  max-height: 700px;
   position: relative;
 }
 
-.swiper-container h2 {
-  z-index: 10;
+.swiper-container .swiper-slide img {
+  -webkit-filter: brightness(0.8);
+  width: 100%;
+  z-index: 3;
+}
+
+.swiper-container .swiper-slide h2 {
+  color: white;
+  width: inherit;
+  height: inherit;
+  text-align: center;
+  line-height: 350px;
+  font-size: 60px;
+  z-index: 1;
   position: absolute;
 }
 
-.swiper-container img {
-  -webkit-filter: brightness(0.8);
-  width: 100%;
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .swiper-container .swiper-slide h2 {
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

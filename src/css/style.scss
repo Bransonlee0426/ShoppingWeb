@@ -8,6 +8,7 @@
     display: none;
   }
 }
+
 @include mobile() {
   #showmenu {
     width: 60px;
@@ -93,6 +94,7 @@
     left: 15px;
   }
 }
+
 body {
   font-family: "PT Serif", serif;
 }
@@ -175,26 +177,47 @@ nav {
       text-decoration: none;
     }
   }
+
   :visited {
     color: #504e4a;
   }
+
   .hvr-underline-reveal:before {
     background: #504e4a !important;
     height: 2px !important;
   }
 }
+
 //swiper css
 .swiper-container {
-  max-height: 700px;
-  .swiper-slide{
+
+  .swiper-slide {
+    max-height: 700px;
     position: relative;
+
+    img {
+      -webkit-filter: brightness(.8);
+      width: 100%;
+      z-index: 3;
+    }
+
+    h2 {
+      color: white;
+      width: inherit;
+      height: inherit;
+      text-align: center;
+      line-height: 350px;
+      font-size: 60px;
+      z-index: 1;
+      position: absolute;
+    }
+
+    @include mobile() {
+      h2 {
+        font-size: 30px;
+      }
+    }
+
   }
-  h2{
-    z-index: 10;
-    position: absolute;
-  }
-  img {
-    -webkit-filter:brightness(.8);
-    width: 100%;
-  }
+
 }

@@ -1,9 +1,10 @@
 $(document).ready(function () {
-
+  const element = document.querySelector('.slidestitle')
   //Listeing media to fix the hover effect.
   let CurWidth = window.matchMedia("(max-width: 767px)");
   CurWidth.addListener(resizeWidth);
   resizeWidth(CurWidth);
+
   function resizeWidth(pMatchMedia) {
     if (pMatchMedia.matches) {
       $('.item').removeClass('hvr-underline-reveal');
@@ -25,7 +26,8 @@ $(document).ready(function () {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-
+    effect: 'fade',
+    roundLengths: true,
     // If we need pagination
     pagination: {
       el: '.swiper-pagination',
@@ -39,9 +41,9 @@ $(document).ready(function () {
     autoplay: {
       delay: 3000,
     },
-    fadeEffect: {
-      crossFade: true,
-    },
+
   })
 
+
+  
 });
