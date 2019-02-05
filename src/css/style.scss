@@ -120,7 +120,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  background: darkgrey;
+  background: white;
   padding: 8px 15px;
 
   .logo {
@@ -136,7 +136,7 @@ nav {
 
 .nav_links {
   display: inline-flex;
-  background: aquamarine;
+  background: white;
   font-size: 15px;
   color: #504e4a;
 
@@ -199,22 +199,69 @@ nav {
       -webkit-filter: brightness(.8);
       width: 100%;
       z-index: 3;
+      opacity: 1;
     }
 
     h2 {
+      font-family: Oswald;
+      text-transform: uppercase;
       color: white;
       width: inherit;
-      height: inherit;
+      max-height: 200px;
       text-align: center;
       line-height: 350px;
-      font-size: 60px;
+      font-size: 100px;
       z-index: 1;
       position: absolute;
+      white-space: nowrap;
+      letter-spacing: 2px;
+      opacity: 1;
+    }
+
+    span {
+      font-family: Oswald;
+      width: inherit;
+      letter-spacing: 2px;
+      font-size: 43px;
+      position: absolute;
+      text-align: center;
+      line-height: 500px;
+      color: #d4514b;
+      font-weight: 900;
+      z-index: 1;
+      visibility: inherit;
+      opacity: 1;
     }
 
     @include mobile() {
       h2 {
-        font-size: 30px;
+        font-family: Oswald;
+        text-transform: uppercase;
+        color: white;
+        width: inherit;
+        max-height: 200px;
+        text-align: center;
+        line-height: 250px;
+        font-size: 50px;
+        z-index: 1;
+        position: absolute;
+        white-space: nowrap;
+        letter-spacing: 2px;
+        opacity: 1;
+      }
+      span {
+        font-family: Oswald;
+        width: inherit;
+        letter-spacing: 2px;
+        font-size: 22.5px;
+        position: absolute;
+        text-align: center;
+        line-height: 350px;
+        color: #d4514b;
+        font-weight: 900;
+        z-index: 1;
+        visibility: inherit;
+        opacity: 1;
       }
     }
 
