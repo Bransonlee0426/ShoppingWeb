@@ -4,13 +4,13 @@ $iPhone6plus-media:414px; //(視專案族群)
 $iPhone6-media:375px; //(視專案族群)
 $iPhone5-media:320px;
 
-@mixin iPad_max-width() {
+@mixin iPad-max-width() {
     @media all and (max-width: $iPad-media) {
         @content;
     }
 }
 
-@mixin iPad_min-width() {
+@mixin iPad-min-width() {
     @media all and (min-width: $iPad-media) {
         @content;
     }
