@@ -2,22 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-
-    <!-- <link rel="shortcut icon" href="favicon.ico">
-    <meta name='description' content='網站描述文字' />
+    <meta charset="UTF-8">  
+    <!-- 網站描述文字
+    <meta name='description' content='網站描述文字' /> 
+    FB的標題
     <meta property="og:title" content="FB的標題" />
+    FB的描述
     <meta property="og:description" content="FB的描述">
+    website
     <meta property="og:type" content="website" />
+    FB上的網址
     <meta property="og:url" content="FB上的網址" />
-    <meta property="og:image" content="FB的圖片" />
-    <link href="圖片路徑" rel="apple-touch-icon" />  -->
+    FB的圖片
+    <meta property="og:image" content="FB的圖片" /> -->
+    <!-- apple-touch-icon -->
+    <link rel="apple-touch-icon" sizes="192x192" href="touch-icon.png">
+    <link rel="shortcut icon" href="../src/images/favicon.png" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../animate.css">
     <link rel="stylesheet" href="../src/css/style.css">
     <link rel="stylesheet" href="../hover-min.css">
     <link rel="stylesheet" href="../swiper.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
     <title>Sport</title>
 </head>
 
@@ -25,12 +33,12 @@
 
     <div class="wrap">
         <nav class="navbar">
-            <h1><a href="#" class="logo">sport</a></h1>
+            <h1><a href="../src/index.html" class="logo">sport</a></h1>
             <ul class="nav-links">
-                <li><a href="#" class="item home hvr-underline-reveal">Home</a></li>
-                <li><a href="#" class="item shop hvr-underline-reveal">Shop</a></li>
-                <li><a href="#" class="item cart hvr-underline-reveal">Cart</a></li>
-                <li><a href="#" class="item login hvr-underline-reveal">Login</a></li>
+                <li><a href="../src/index.html" class="item home hvr-underline-reveal">Home</a></li>
+                <li><a href="../src/shop.html" class="item shop hvr-underline-reveal">Shop</a></li>
+                <li><a href="../src/cart.html" class="item cart hvr-underline-reveal">Cart</a></li>
+                <li><a href="../src/login.html" class="item login hvr-underline-reveal">Login</a></li>
             </ul>
             <div id="showmenu">
                 <span></span>
@@ -40,7 +48,7 @@
             <!-- <a href="#" class="showmenu">menu</a> -->
         </nav>
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="swiper-container swiper-container1">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -61,12 +69,10 @@
                 </div>
             </div>
             <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination1"></div>
             <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-            <!-- If we need scrollbar -->
-            <div class="swiper-scrollbar"></div>
+            <div class="swiper-button-prev swiper-button-prev1"></div>
+            <div class="swiper-button-next swiper-button-next1"></div>
         </div>
         <div class="shop-info">
             <div class="shopinfo-left">
@@ -80,10 +86,11 @@
                 <img src="../src/images/shopinfo.jpg" alt="">
             </div>
         </div>
+        <hr class="sepline" />
         <div class="shop-product">
-            <div class="shop-product-left">
-                <img src="../src/images/dumbbell1.jpg" alt="">
-            </div>
+            <a class="shop-product-left">
+                <img src="../src/images/rope.jpeg" alt="">
+            </a>
             <div class="shop-product-right">
                 <h3>Lorem ipsum</h3>
                 <span class="price-regular">$250</span>
@@ -99,17 +106,158 @@
                     </button>
                 </form>
                 <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non deleniti quasi ad provident
-                    asperiores explicabo ipsa quam praesentium, quas vero ea iure a ullam porro eligendi qui nemo
-                    mollitia molestias repudiandae pariatur harum! Cupiditate rerum minima libero magni, nihil
-                    reiciendis accusamus molestiae cumque blanditiis natus est quod neque impedit sapiente.</section>
+                    asperiores explicabo, quas vero ea iure a ullam porro eligendi qui nemo
+                    mollitia molestias repudiandae cumque blanditiis natus est quod neque impedit sapiente.</section>
+                <ul class="share-list">
+                    <li class="share-facebook"><a target="view_window" href=""><img src="images/facebook16.png"><span>Share</span></a></li>
+                    <li class="share-tweet"><a target="view_window" href=""><img src="images/tweet16.png"><span>Tweet</span></a></li>
+                </ul>
             </div>
         </div>
+        <h2 class="TESTIMONIALS">TESTIMONIALS</h2>
+        <div class="signers">
+            <div class="signer">
+                <i class="fas fa-signature" style="font-size:2em;"></i>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus maiores, nihil amet
+                    qui voluptatem expedita iusto nemo molestias totam.</p>
+                <cite>- Lorem ipsum</cite>
+            </div>
+            <div class="signer">
+                <i class="fas fa-signature" style="font-size:2em;"></i>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus maiores, nihil amet
+                    qui voluptatem expedita iusto nemo molestias totam.</p>
+                <cite>- Lorem ipsum</cite>
+            </div>
+            <div class="signer">
+                <i class="fas fa-signature" style="font-size:2em;"></i>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus maiores, nihil amet
+                    qui voluptatem expedita iusto nemo molestias totam.</p>
+                <cite>- Lorem ipsum</cite>
+            </div>
+        </div>
+        <!-- for mobile -->
+        <div class="swiper-container swiper-container2">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="signerm">
+                        <i class="fas fa-signature" style="font-size:2em;"></i>
+                        <p>Loradaem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus
+                            maiores, nihil amet
+                            qui voluptatem expedita iusto nemo molestias totam.</p>
+                        <cite>- Lorem ipsum1</cite>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="signerm">
+                        <i class="fas fa-signature" style="font-size:2em;"></i>
+                        <p>Ldforem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus
+                            maiores, nihil amet
+                            qui voluptatem expedita iusto nemo molestias totam.</p>
+                        <cite>- Lorem ipsum2</cite>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="signerm">
+                        <i class="fas fa-signature" style="font-size:2em;"></i>
+                        <p>Lordfdem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus ducimus
+                            maiores, nihil amet
+                            qui voluptatem expedita iusto nemo molestias totam.</p>
+                        <cite>- Lorem ipsum3</cite>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination swiper-pagination2"></div>
+        </div>
+        <!--images bar-->
+        <div class="contaniner-imagesbar">
+            <div class="a1">
+                <img src="../src/images/boxing.jpg" alt="">
+            </div>
+            <div class="a2">
+                <img src="../src/images/cleanjerk.jpg" alt="">
+            </div>
+        </div>
+        <!--images bar for mobile-->
+        <div id="contaniner-imagesbarm">
+            <img src="../src/images/boxing.jpg" alt="">
+            <img src="../src/images/cleanjerk.jpg" alt="">
+        </div>
+        <div class="featured-collection-wrap">
+            <h2 class="featured-collection">FEATURED COLLECTION</h2>
+            <ul class="featured-collection-items">
+                <li>
+                    <a href="" class="featured-collection-item">
+                        <img src="../src/images/dumbbell.jpg" alt="">
+                        <span>Dumbbell</span>
+                        <div>$299</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="featured-collection-item">
+                        <img src="../src/images/Clip.jpg" alt="">
+                        <span>Clip</span>
+                        <div>$459</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="featured-collection-item">
+                        <img src="../src/images/shoes.jpg" alt="">
+                        <span>Shoes</span>
+                        <div>$1599</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="featured-collection-item">
+                        <img src="../src/images/protein.jpg" alt="">
+                        <span>Protein</span>
+                        <div>$1099</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <footer class="site-footer">
+            <div class="top-footer">
+                <div class="quick-links">
+                    <h4>Quick links</h4>
+                    <ul>
+                        <li><a href="../src/shop.html">Shop</a></li>
+                        <li><a href="../src/cart.html">Cart</a></li>
+                        <li><a href="../src/contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="subscript">
+                    <h4>Join our mailing list</h4>
+                    <input type="email" placeholder="Email address">
+                    <button class="subscript-btn"><span>SUBSCRIPT</span></button>
+                </div>
+            </div>
+            <hr class="footer-hr">
+            <div class="bottom-footer">
+                <div class="social-icons">
+                    <ul>
+                        <li><a href=""><i class="fab fa-facebook-square" style="font-size:2em;color: #504e4a"></i></a></li>
+                        <li> <a href=""><i class="fab fa-twitter" style="font-size:2em;color: #504e4a"></i></a></li>
+                    </ul>
+                    <p>© 2019, Sport Powered by Branson</p>
+                </div>
+                <div class="payment-icons">
+                    <ul>
+                        <li><img src="../src/images/master.png" alt=""></li>
+                        <li><img src="../src/images/rupay.png" alt=""></li>
+                        <li><img src="../src/images/visa.png" alt=""></li>
+                        <li><img src="../src/images/unionpay.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </div>
-
     <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="../src/js/index.js"></script>
-    <script src="../swiper.min.js"></script>
-
+    <script type="text/javascript" src="../swiper.min.js"></script>
+    <script type="text/javascript" src=""></script>
 </body>
 
 </html>

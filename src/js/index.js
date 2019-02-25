@@ -21,7 +21,7 @@ $(document).ready(function () {
   $('#showmenu').click(function () {
     $(this).toggleClass('open');
   });
-  let mySwiper = new Swiper('.swiper-container', {
+  let mySwiper1 = new Swiper('.swiper-container1', {
 
     // Optional parameters
     direction: 'horizontal',
@@ -30,20 +30,33 @@ $(document).ready(function () {
     roundLengths: true,
     // If we need pagination
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination1',
     },
 
     // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
     },
     autoplay: {
       delay: 3000,
     },
+  })
 
+  let mySwiper2 = new Swiper('.swiper-container2', {
+
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination2',
+      dynamicBullets: true
+    },
+    autoplay: {
+      delay: 3000,
+    },
   })
 
 
-  
 });
