@@ -58,5 +58,18 @@ $(document).ready(function () {
     },
   })
 
-
+  function isEmailEmpty() {
+    var email = $(".subscript-input").val();
+    var message = "";
+    if (email == '') {
+      alert("Please input your Email address!");
+    } else{
+      alert("You Have Been Successfully Subscribed!");
+    }
+}
+  $('.subscript-btn').click(function (e) {
+      e.preventDefault();
+      //驗證郵箱
+      isEmailEmpty();
+  });
 });

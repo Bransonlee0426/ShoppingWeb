@@ -333,7 +333,7 @@ hr.sepline {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0px 14px 100px 0px;
+  padding: 0px 0px 100px 0px;
 
   @include mobile {
     padding: 40px 0px 30px 0px;
@@ -341,7 +341,7 @@ hr.sepline {
 
   .shop-product-right {
     display: inline-block;
-    width: 550px;
+    width: 536px;
     max-height: 430px;
     color: #7f7d7c;
     padding: 0px 0px 50px 10px;
@@ -899,6 +899,7 @@ hr.sepline {
   text-align: center;
   padding: 40px;
 }
+
 .contact-form {
   max-width: 800px;
   max-height: 600px;
@@ -924,6 +925,7 @@ hr.sepline {
     height: 30px;
     border: 0.5px solid #949494;
   }
+
   textarea {
     border: 0.5px solid #949494;
     max-width: 780px;
@@ -960,5 +962,79 @@ hr.sepline {
     font-size: 14px;
     background-color: #998876;
     color: white;
+  }
+  #input-message:hover {
+    background-color: #7f7d7c;
+  }
+}
+
+@include mobile(){
+  .contact-form {
+    max-width: 800px;
+    max-height: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    grid-template-rows: 100px 100px 100px 300px;
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "A1"
+      "B1"
+      "C1"
+      "D1";
+    * {
+      padding: 5px;
+    }
+    label {
+      color: #7f7d7c;
+      line-height: 2;
+      font-size: 1em;
+      font-family: Oswald;
+    }
+    input {
+      height: 30px;
+      border: 0.5px solid #949494;
+    }
+  
+    textarea {
+      border: 0.5px solid #949494;
+      max-width: 780px;
+    }
+  
+    .form-name {
+      display: flex;
+      flex-direction: column;
+      grid-area: A1;
+    }
+    .form-email {
+      display: flex;
+      flex-direction: column;
+      grid-area: B1;
+    }
+    .form-number {
+      display: flex;
+      flex-direction: column;
+      grid-area: C1;
+    }
+    .form-message {
+      display: flex;
+      flex-direction: column;
+      grid-area: D1;
+    }
+    #input-message {
+      margin: 10px 0px 0px 0px;
+      width: 80px;
+      height: 51px;
+      cursor: pointer;
+      padding-top: 5px;
+      font-family: "PT Serif", serif;
+      letter-spacing: 0.08em;
+      font-size: 14px;
+      background-color: #998876;
+      color: white;
+    }
+    #input-message:hover {
+      background-color: #7f7d7c;
+    }
   }
 }
