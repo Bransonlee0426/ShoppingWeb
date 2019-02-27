@@ -1319,7 +1319,7 @@ hr.sepline {
   max-width: 1110px;
   margin-right: auto;
   margin-left: auto;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 10px 10px 10px;
   text-align: start;
 }
 
@@ -1329,7 +1329,7 @@ hr.sepline {
 }
 
 .breadcrumb-container .breadcrumb li + li::before {
-  padding: 8px;
+  padding: 20px;
   color: black;
   content: "/\00a0";
 }
@@ -1344,5 +1344,119 @@ hr.sepline {
 
 .breadcrumb-container .breadcrumb a:hover {
   color: #666666;
+}
+
+.shop-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2em;
+}
+
+.shop-content .sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  line-height: 80px;
+}
+
+.shop-content .sidebar ul {
+  width: 200px;
+  padding-left: 10px;
+}
+
+.shop-content .sidebar ul li {
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.shop-content .sidebar ul li a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.shop-content .sidebar ul li a:visited {
+  color: #7f7d7c;
+}
+
+.shop-content .sidebar ul li a:hover {
+  color: #666666;
+}
+
+.shop-content .productions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 920px;
+}
+
+.shop-content .productions .productions-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px;
+}
+
+.shop-content .productions .productions-items .productions-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+  line-height: 30px;
+}
+
+.shop-content .productions .productions-items a {
+  text-decoration: none;
+  color: #7f7d7c;
+}
+
+.shop-content .productions .productions-items a:visited {
+  text-decoration: none;
+  color: #7f7d7c;
+}
+
+.shop-content .productions .productions-items a:hover {
+  color: #666666;
+}
+
+.shop-content .productions .productions-items a:hover img {
+  -webkit-filter: opacity(0.7);
+}
+
+.shop-content .productions .productions-items a:hover span {
+  text-decoration: underline;
 }
 /*# sourceMappingURL=style.css.map */
