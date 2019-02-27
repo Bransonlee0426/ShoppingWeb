@@ -1305,4 +1305,44 @@ hr.sepline {
     background-color: #7f7d7c;
   }
 }
+
+.shop-top img {
+  width: 100%;
+  height: 200px;
+}
+
+.hr-top.up {
+  margin-top: 30px;
+}
+
+.breadcrumb-container .breadcrumb {
+  max-width: 1110px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 0px 10px 10px;
+  text-align: start;
+}
+
+.breadcrumb-container .breadcrumb li {
+  color: #504e4a;
+  display: inline;
+}
+
+.breadcrumb-container .breadcrumb li + li::before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumb-container .breadcrumb a {
+  text-decoration: none;
+}
+
+.breadcrumb-container .breadcrumb a:visited {
+  color: #7f7d7c;
+}
+
+.breadcrumb-container .breadcrumb a:hover {
+  color: #666666;
+}
 /*# sourceMappingURL=style.css.map */
