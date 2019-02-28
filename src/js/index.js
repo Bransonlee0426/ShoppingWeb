@@ -72,4 +72,26 @@ $(document).ready(function () {
       //驗證郵箱
       isEmailEmpty();
   });
+
+  let productionsAll = '<li><a href="" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="" class="productions-item"><img src="../src/images/Clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
+  let productionsMachine = '<li><a href="" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="" class="productions-item"><img src="../src/images/Clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li>';
+  let productionsShose = '<li><a href="" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
+  let productionsFoods = '<li><a href="" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
+
+  $('#category-all').click(function (e) { 
+    e.preventDefault();
+    $('.productions-items').html(productionsAll);
+  });
+  $('#category-machine').click(function (e) { 
+    e.preventDefault();
+    $('.productions-items').html(productionsMachine);
+  });
+  $('#category-shoes').click(function (e) { 
+    e.preventDefault();
+    $('.productions-items').html(productionsShose);
+  });
+  $('#category-foods').click(function (e) { 
+    e.preventDefault();
+    $('.productions-items').html(productionsFoods);
+  });
 });
