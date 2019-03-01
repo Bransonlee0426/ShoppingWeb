@@ -1321,6 +1321,10 @@ hr.sepline {
   margin-top: 30px;
 }
 
+.hr-top.down {
+  margin-bottom: 30px;
+}
+
 .breadcrumb-container .breadcrumb {
   max-width: 1110px;
   margin-right: auto;

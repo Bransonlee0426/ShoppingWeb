@@ -73,10 +73,10 @@ $(document).ready(function () {
       isEmailEmpty();
   });
 
-  let productionsAll = '<li><a href="" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="" class="productions-item"><img src="../src/images/Clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
-  let productionsMachine = '<li><a href="" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="" class="productions-item"><img src="../src/images/Clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li>';
-  let productionsShose = '<li><a href="" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
-  let productionsFoods = '<li><a href="" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
+  let productionsAll = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
+  let productionsMachine = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li>';
+  let productionsShose = '<li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
+  let productionsFoods = '<li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
 
   $('#category-all').click(function (e) { 
     e.preventDefault();
