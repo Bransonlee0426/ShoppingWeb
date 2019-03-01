@@ -1392,7 +1392,7 @@ hr.sepline {
 
 .shop-content .sidebar ul li a {
   text-decoration: none;
-  padding: 10px;
+  padding: 20px 50px 20px 10px;
 }
 
 .shop-content .sidebar ul li a:visited {
