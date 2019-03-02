@@ -1660,8 +1660,32 @@ hr.sepline {
 }
 
 @media all and (min-width: 768px) {
-  .cart-table #total-td .remove-a {
+  .cart-table #total-td .remove-a-total {
     display: none;
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .cart-table #total-td .remove-a-total {
+    padding: 5px;
+    border: 1px solid #998876;
+    color: #998876;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    font-size: 0.1em;
+  }
+  .cart-table #total-td .remove-a-total:visited {
+    color: #998876;
+  }
+  .cart-table #total-td .remove-a-total:hover {
+    opacity: 0.8;
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .cart-table #total-td {
+    line-height: 50px;
   }
 }
 

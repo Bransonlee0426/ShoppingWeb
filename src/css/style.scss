@@ -1371,12 +1371,36 @@ hr.sepline {
     text-align: right;
 
     @include iPad-min-width() {
-      .remove-a {
+      .remove-a-total {
         display: none;
       }
     }
-  }
 
+    @include mobile() {
+      .remove-a-total {
+        padding: 5px;
+        border: 1px solid #998876;
+        color: #998876;
+        border-radius: 2px;
+        cursor: pointer;
+        letter-spacing: 1.5px;
+        font-size: 0.1em;
+      }
+
+      .remove-a-total:visited {
+        color: #998876;
+      }
+
+      .remove-a-total:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  @include mobile() {
+      #total-td{
+        line-height: 50px;
+      }
+  }
   input {
     width: 80px;
     height: 50px;
@@ -1401,7 +1425,7 @@ hr.sepline {
     font-size: 0.5em;
   }
 
-   .remove-a:visited {
+  .remove-a:visited {
     color: #998876;
   }
 

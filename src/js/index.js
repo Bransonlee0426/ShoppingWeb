@@ -98,6 +98,14 @@ $(document).ready(function () {
   //remove the production item.
   $('.remove-a').click(function (e) {
     e.preventDefault();
-    $(this).parents('tr').empty();
+    if (confirm('確定要刪除這項商品？')) {
+      $(this).parents('tr').empty();
+    }
+  });
+  $('.remove-a-total').click(function (e) {
+    e.preventDefault();
+    if (confirm('確定要刪除這項商品？')) {
+      $(this).parents('tr').empty();
+    }
   });
 });
