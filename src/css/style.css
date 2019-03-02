@@ -55,7 +55,7 @@ table {
 
 /*----------------CSSreset------------------*/
 /* Icon 4 */
-@media all and (min-width: 767px) {
+@media all and (min-width: 768px) {
   #showmenu {
     display: none;
   }
@@ -216,7 +216,7 @@ nav .logo {
   }
 }
 
-@media all and (min-width: 767px) {
+@media all and (min-width: 768px) {
   .nav-links .item {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -379,7 +379,7 @@ hr.sepline {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-@media all and (min-width: 767px) {
+@media all and (min-width: 768px) {
   hr.sepline {
     display: none;
   }
@@ -620,7 +620,7 @@ hr.sepline {
   }
 }
 
-@media all and (min-width: 767px) {
+@media all and (min-width: 768px) {
   .swiper-container2 {
     display: none;
   }
@@ -679,7 +679,7 @@ hr.sepline {
   }
 }
 
-@media all and (min-width: 767px) {
+@media all and (min-width: 768px) {
   #contaniner-imagesbarm {
     display: none;
   }
@@ -1649,8 +1649,37 @@ hr.sepline {
   opacity: 0.8;
 }
 
-.cart-table .production-name .remove-a {
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .cart-table .production-name {
+    display: none;
+  }
+}
+
+.cart-table #total-td {
+  text-align: right;
+}
+
+@media all and (min-width: 768px) {
+  .cart-table #total-td .remove-a {
+    display: none;
+  }
+}
+
+.cart-table input {
   width: 80px;
+  height: 50px;
+  font-size: 1em;
+  text-align: center;
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .cart-table input {
+    width: 40px;
+  }
+}
+
+.cart-table .remove-a {
+  width: 60px;
   padding: 5px;
   border: 1px solid #998876;
   color: #998876;
@@ -1660,22 +1689,11 @@ hr.sepline {
   font-size: 0.5em;
 }
 
-.cart-table .production-name .remove-a:visited {
+.cart-table .remove-a:visited {
   color: #998876;
 }
 
-.cart-table .production-name .remove-a:hover {
+.cart-table .remove-a:hover {
   opacity: 0.8;
-}
-
-.cart-table #total-td {
-  text-align: right;
-}
-
-.cart-table input {
-  width: 80px;
-  height: 50px;
-  font-size: 1em;
-  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
