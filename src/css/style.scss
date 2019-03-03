@@ -96,7 +96,8 @@
 }
 
 body {
-  font-family: "PT Serif", serif;
+  // font-family: "PT Serif", serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .wrap {
@@ -672,11 +673,14 @@ hr.sepline {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     margin-top: 80px;
     margin-bottom: 80px;
+    margin-right: auto;
+    margin-left: auto;
     color: #7f7d7c;
+    max-width: 1200px;
 
     a {
       text-decoration: none;
@@ -690,7 +694,7 @@ hr.sepline {
     .quick-links {
       display: flex;
       flex-direction: column;
-      width: 550px;
+      // width: 550px;
 
       h4 {
         font-size: 1em;
@@ -711,7 +715,7 @@ hr.sepline {
     .subscript {
       display: inline;
       flex-direction: column;
-      width: 550px;
+      width: 500px;
 
       h4 {
         font-size: 1em;
@@ -747,11 +751,12 @@ hr.sepline {
   }
 
   .bottom-footer {
+    max-width: 1200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: space-between;
+    margin: 0px auto;
     .social-icons {
       width: 400px;
       padding-right: 150px;
@@ -768,7 +773,7 @@ hr.sepline {
 
     .payment-icons {
       width: 400px;
-      padding-right: 150px;
+      padding-right: 110px;
 
       li {
         display: inline;
@@ -1289,7 +1294,8 @@ hr.sepline {
   padding: 30px 30px 60px 30px;
 }
 .page-wrap {
-  width: 90%;
+  max-width: 1100px;
+  padding: 0px 10px;
   margin: 0 auto;
   color: #504e4a;
   .cart-table {
@@ -1422,6 +1428,56 @@ hr.sepline {
 
     .remove-a:hover {
       opacity: 0.8;
+    }
+  }
+
+  .cart-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    line-height: 30px;
+
+    .subtotal {
+      font-size: 1.2em;
+      padding-top: 40px;
+
+      .subtotal-span {
+        padding-right: 110px;
+      }
+      .total {
+      }
+    }
+    .information {
+      color: #7f7d7c;
+      font-size: 0.9em;
+      padding-bottom: 30px;
+      .info {
+      }
+    }
+    .button {
+      font-size: 1em;
+      letter-spacing: 2px;
+      a {
+        border: 1px solid #998876;
+        padding: 12px 18px;
+      }
+      a,
+      a:visited {
+        text-decoration: none;
+      }
+      a:hover {
+        opacity: 0.8;
+      }
+      .continue {
+        color: #998876;
+      }
+      .checkout {
+        color: white;
+        background-color: #998876;
+      }
     }
   }
 }
