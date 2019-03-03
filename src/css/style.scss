@@ -1140,7 +1140,9 @@ hr.sepline {
           text-decoration: none;
           padding: 20px 50px 20px 10px;
         }
-
+        #category-all{
+          padding-right: 120px;
+        }
         a:visited {
           color: #7f7d7c;
         }
@@ -1301,7 +1303,7 @@ hr.sepline {
   .cart-table {
     width: 100%;
     text-align: center;
-    
+
     #product-th {
       text-align: left;
     }
@@ -1429,6 +1431,24 @@ hr.sepline {
     .remove-a:hover {
       opacity: 0.8;
     }
+    .price-td,
+    #total-td {
+      width: 100px;
+    }
+    .production-name-td {
+      width: 450px;
+    }
+    @include mobile() {
+      .price-td,
+      #total-td {
+        width: 60px;
+      }
+    }
+    @include mobile() {
+      .production-name-td {
+        width: 0px;
+      }
+    }
   }
 
   .cart-footer {
@@ -1479,7 +1499,6 @@ hr.sepline {
       }
       .continue {
         color: #998876;
-        
       }
       .checkout {
         color: white;

@@ -1399,6 +1399,10 @@ hr.sepline {
   padding: 20px 50px 20px 10px;
 }
 
+.shop-content .sidebar ul li #category-all {
+  padding-right: 120px;
+}
+
 .shop-content .sidebar ul li a:visited {
   color: #7f7d7c;
 }
@@ -1727,6 +1731,28 @@ hr.sepline {
 
 .page-wrap .cart-table .remove-a:hover {
   opacity: 0.8;
+}
+
+.page-wrap .cart-table .price-td,
+.page-wrap .cart-table #total-td {
+  width: 100px;
+}
+
+.page-wrap .cart-table .production-name-td {
+  width: 450px;
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .page-wrap .cart-table .price-td,
+  .page-wrap .cart-table #total-td {
+    width: 60px;
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .page-wrap .cart-table .production-name-td {
+    width: 0px;
+  }
 }
 
 .page-wrap .cart-footer {
