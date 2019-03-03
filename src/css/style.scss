@@ -1301,7 +1301,7 @@ hr.sepline {
   .cart-table {
     width: 100%;
     text-align: center;
-
+    
     #product-th {
       text-align: left;
     }
@@ -1460,9 +1460,15 @@ hr.sepline {
     .button {
       font-size: 1em;
       letter-spacing: 2px;
+
       a {
         border: 1px solid #998876;
         padding: 12px 18px;
+      }
+      @include mobile() {
+        a {
+          padding: 6px 9px;
+        }
       }
       a,
       a:visited {
@@ -1473,10 +1479,16 @@ hr.sepline {
       }
       .continue {
         color: #998876;
+        
       }
       .checkout {
         color: white;
         background-color: #998876;
+      }
+    }
+    @include mobile() {
+      .button {
+        display: block;
       }
     }
   }

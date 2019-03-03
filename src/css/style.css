@@ -1774,6 +1774,12 @@ hr.sepline {
   padding: 12px 18px;
 }
 
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .page-wrap .cart-footer .button a {
+    padding: 6px 9px;
+  }
+}
+
 .page-wrap .cart-footer .button a,
 .page-wrap .cart-footer .button a:visited {
   text-decoration: none;
@@ -1790,5 +1796,11 @@ hr.sepline {
 .page-wrap .cart-footer .button .checkout {
   color: white;
   background-color: #998876;
+}
+
+@media all and (max-width: 767px) and (min-width: 320px) {
+  .page-wrap .cart-footer .button {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */
