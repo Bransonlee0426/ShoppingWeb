@@ -73,6 +73,7 @@ $(document).ready(function () {
     isEmailEmpty();
   });
 
+
   let productionsAll = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
   let productionsMachine = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li>';
   let productionsShose = '<li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
@@ -118,31 +119,25 @@ $(document).ready(function () {
       price: $(this).parent().prevAll('.price-discount').data('price'),
       amount: parseInt($(this).prev().find('.product-qty').val())
     };
-
-
     //檢查購物車是否存在
     let cart = isCartEmpty();
     //判斷物件是否重複
     if (cart.length === 0) { //如果cart為空
       cart.push(product_info);
-      console.log('cart為空');
     } else {
       //如果cart有東西判斷物件是否重複
       for (let i = 0; i < cart.length; i++) {
         //如果物件重複
         if (cart[i].name === product_info.name) {
           cart[i].amount = cart[i].amount + product_info.amount;
-          console.log('重複檢查');
           break;
           //到最後一個都沒有重複的話
         } else if (i === cart.length - 1) {
           cart.push(product_info);
-          console.log('PUSH');
           break;
         }
       }
     }
-    
     //放到localstorage裡面
     let item = JSON.stringify(cart);
     localStorage.setItem('cart', item);
@@ -155,14 +150,10 @@ $(document).ready(function () {
     console.log("localStorage " + Object.keys(localStorage) + ":" + Object.values(localStorage));
   });
 
-
-
-  $('#te').on('click', function () {
-    let cartObj = cart;
-    console.log(cartObj);
+  $('.qty-input').on('change, mouseup, keyup', function () {
+    
+    console.log($(this).val());
   });
-
-
 
   //判斷是否有建立過購物車
   function isCartEmpty() {
