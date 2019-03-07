@@ -401,14 +401,11 @@ hr.sepline {
         background-color: #998876;
         border-radius: 3px;
         cursor: pointer;
-
-        p {
-          color: white;
-          font-size: 1.5em;
-          text-decoration: none;
-          align-content: center;
-          padding: inherit;
-        }
+        color: white;
+        font-size: 1.2em;
+        text-decoration: none;
+        align-content: center;
+        padding: inherit;
       }
 
       button:hover {
@@ -1140,7 +1137,7 @@ hr.sepline {
           text-decoration: none;
           padding: 20px 50px 20px 10px;
         }
-        #category-all{
+        #category-all {
           padding-right: 120px;
         }
         a:visited {
