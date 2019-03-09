@@ -4,6 +4,9 @@ $(document).ready(function () {
   let CurWidth = window.matchMedia("(max-width: 767px)");
   CurWidth.addListener(resizeWidth);
   resizeWidth(CurWidth);
+  //cart list. 
+  isCartEmpty();
+  showTotal();
 
   function resizeWidth(pMatchMedia) {
     if (pMatchMedia.matches) {
@@ -76,7 +79,7 @@ $(document).ready(function () {
 
   let productionsAll = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
   let productionsMachine = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li>';
-  let productionsShose = '<li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
+  let productionsShoes = '<li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
   let productionsFoods = '<li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
 
   $('#category-all').on('click', function (e) {
@@ -89,7 +92,7 @@ $(document).ready(function () {
   });
   $('#category-shoes').on('click', function (e) {
     e.preventDefault();
-    $('.productions-items').html(productionsShose);
+    $('.productions-items').html(productionsShoes);
   });
   $('#category-foods').on('click', function (e) {
     e.preventDefault();
@@ -117,7 +120,8 @@ $(document).ready(function () {
     let product_info = {
       name: $(this).parent().prevAll('.product-title').data('name'),
       price: $(this).parent().prevAll('.price-discount').data('price'),
-      amount: parseInt($(this).prev().find('.product-qty').val())
+      amount: parseInt($(this).prev().find('.product-qty').val()),
+      total: $(this).parent().prevAll('.price-discount').data('price') * parseInt($(this).prev().find('.product-qty').val())
     };
     //檢查購物車是否存在
     let cart = isCartEmpty();
@@ -130,6 +134,7 @@ $(document).ready(function () {
         //如果物件重複
         if (cart[i].name === product_info.name) {
           cart[i].amount = cart[i].amount + product_info.amount;
+          cart[i].total = cart[i].total + product_info.total;
           break;
           //到最後一個都沒有重複的話
         } else if (i === cart.length - 1) {
@@ -141,6 +146,7 @@ $(document).ready(function () {
     //放到localstorage裡面
     let item = JSON.stringify(cart);
     localStorage.setItem('cart', item);
+    alert('item(s) added!')
     console.log(cart);
     console.log("localStorage " + Object.keys(localStorage) + ":" + Object.values(localStorage));
   });
@@ -150,9 +156,10 @@ $(document).ready(function () {
     console.log("localStorage " + Object.keys(localStorage) + ":" + Object.values(localStorage));
   });
 
-  $('.qty-input').on('change, mouseup, keyup', function () {
-    
-    console.log($(this).val());
+  $('.qty-input').on('click change', function () {
+    let total = $(this).parent().prev().data().price * $(this).val();
+    $(this).parent().next().children('div').text('$' + total);
+    console.log(total);
   });
 
   //判斷是否有建立過購物車
@@ -167,6 +174,48 @@ $(document).ready(function () {
     }
   }
 
+  //inial cart list
+  function showTotal() {
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    if (cart.length > 0) {
+      $('.cartempty').css('display', 'none');
+    } else if (cart.length === 0) {
+      $('.cart-title').css('display', 'none');
+    }
+    let subtotalArray = [];
+    for (let i = 0; i < cart.length; i++) {
 
+      let productName = cart[i].name;
+      let productPrice = cart[i].price;
+      let productAmount = cart[i].amount;
+      let productTotal = cart[i].price * cart[i].amount;
 
+      var htmlString =
+        '                <tr>' +
+        '                    <td id="productimg-td">' +
+        '                        <div id="productimg"><a href="../src/' + productName + '.html"><img src="../src/images/' + productName + '95*95.jpeg"></a></div>' +
+        '                    </td>' +
+        '                    <td class="production-name-td">' +
+        '                        <div class="production-name">' +
+        '                            <a class="production-name-a" href="../src/' + productName + '.html">' + productName + '</a>' +
+        '                            <a class="remove-a">REMOVE</a>' +
+        '                        </div>' +
+        '                    </td>' +
+        '                    <td class="price-td" data-price="' + productPrice + '">$' + productPrice + '</td>' +
+        '                    <td><input class="qty-input" type="number" value="' + productAmount + '" min="1"></td>' +
+        '                    <td id="total-td">' +
+        '                        <div>' + '$' + productTotal + '</div>' +
+        '                        <a class="remove-a-total">REMOVE</a>' +
+        '                    </td>' +
+        '                </tr>';
+      $('.cart-table').append(htmlString);
+      subtotalArray.push(productTotal);
+    }
+    let subtotal = subtotalArray.reduce((acc, cur) => acc + cur);
+    $('.total').text('$' + subtotal);
+    console.log();
+
+    $('.total').text();
+
+  }
 });
