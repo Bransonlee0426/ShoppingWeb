@@ -102,14 +102,57 @@ $(document).ready(function () {
   //remove the production item.
   $('.remove-a').on('click', function (e) {
     e.preventDefault();
-    if (confirm('確定要刪除這項商品？')) {
-      $(this).parents('tr').empty();
+
+    let cart = isCartEmpty();
+    let curItem = $(this).prev().text();
+    let subtotalBefore = parseInt($(this).parents('.cart-table').next().find('.total').text().substr(1));
+
+    for (let i = 0; cart.length > 0; i++) {
+      if (curItem === cart[i].name) {
+        if (confirm('確定要刪除這項商品？')) {
+          subtotal = subtotalBefore - cart[i].total;
+          if (subtotal > 0) {
+            $(this).parents('.cart-table').next().find('.total').text('$' + subtotal);
+          } else if (subtotal === 0) {
+            $(this).parents('.cart-table').next().find('.total').text('');
+          }
+          $(this).parents('tr').empty();
+          cart.splice(i, 1);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          break;
+        } else {
+          break;
+        }
+      }
     }
+
   });
+  //remove rwd
   $('.remove-a-total').on('click', function (e) {
     e.preventDefault();
-    if (confirm('確定要刪除這項商品？')) {
-      $(this).parents('tr').empty();
+    let cart = isCartEmpty();
+    let curItem = $(this).parent().prevAll('.production-name-td').find('.production-name-a').text();
+    let subtotalBefore = parseInt($(this).parents('.cart-table').next().find('.total').text().substr(1));
+
+    console.log(subtotalBefore);
+
+    for (let i = 0; cart.length > 0; i++) {
+      if (curItem === cart[i].name) {
+        if (confirm('確定要刪除這項商品？')) {
+          subtotal = subtotalBefore - cart[i].total;
+          if (subtotal > 0) {
+            $(this).parents('.cart-table').next().find('.total').text('$' + subtotal);
+          } else if (subtotal === 0) {
+            $(this).parents('.cart-table').next().find('.total').text('');
+          }
+          $(this).parents('tr').empty();
+          cart.splice(i, 1);
+          localStorage.setItem('cart', JSON.stringify(cart));
+          break;
+        } else {
+          break;
+        }
+      }
     }
   });
 
@@ -144,22 +187,33 @@ $(document).ready(function () {
       }
     }
     //放到localstorage裡面
-    let item = JSON.stringify(cart);
-    localStorage.setItem('cart', item);
+    localStorage.setItem('cart', JSON.stringify(cart));
     alert('item(s) added!')
-    console.log(cart);
-    console.log("localStorage " + Object.keys(localStorage) + ":" + Object.values(localStorage));
-  });
-
-  $('#cl').on('click', function () {
-    localStorage.clear();
-    console.log("localStorage " + Object.keys(localStorage) + ":" + Object.values(localStorage));
   });
 
   $('.qty-input').on('click change', function () {
-    let total = $(this).parent().prev().data().price * $(this).val();
-    $(this).parent().next().children('div').text('$' + total);
-    console.log(total);
+    let cart = isCartEmpty();
+    let currItem = $(this).parent().prevAll().find('.production-name-a').text();
+    let currItemQTY = parseInt($(this).val());
+    let subtotalArray = [];
+    for (let i = 0; cart.length > 0; i++) {
+      if (cart[i].name === currItem) {
+        cart[i].amount = currItemQTY;
+        cart[i].total = currItemQTY * cart[i].price;
+        $(this).parent().next().children('div').text('$' + cart[i].total);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        console.log(cart);
+        break;
+      }
+    }
+
+    for (let i = 0; i < cart.length; i++) {
+      subtotalArray.push(cart[i].total);
+
+    }
+    let subtotal = subtotalArray.reduce((acc, cur) => acc + cur);
+    $('.total').text('$' + subtotal);
+
   });
 
   //判斷是否有建立過購物車
@@ -174,22 +228,18 @@ $(document).ready(function () {
     }
   }
 
+
   //inial cart list
   function showTotal() {
-    let cart = JSON.parse(localStorage.getItem('cart'));
-    if (cart.length > 0) {
-      $('.cartempty').css('display', 'none');
-    } else if (cart.length === 0) {
-      $('.cart-title').css('display', 'none');
-    }
+    let cart = isCartEmpty();
     let subtotalArray = [];
+
     for (let i = 0; i < cart.length; i++) {
 
       let productName = cart[i].name;
       let productPrice = cart[i].price;
       let productAmount = cart[i].amount;
       let productTotal = cart[i].price * cart[i].amount;
-
       var htmlString =
         '                <tr>' +
         '                    <td id="productimg-td">' +
@@ -211,9 +261,13 @@ $(document).ready(function () {
       $('.cart-table').append(htmlString);
       subtotalArray.push(productTotal);
     }
-    let subtotal = subtotalArray.reduce((acc, cur) => acc + cur);
-    $('.total').text('$' + subtotal);
-    console.log();
+
+    if (subtotalArray == 0) {
+      $('.total').text('');
+    } else if (subtotalArray != 0) {
+      let subtotal = subtotalArray.reduce((acc, cur) => acc + cur);
+      $('.total').text('$' + subtotal);
+    }
 
     $('.total').text();
 
