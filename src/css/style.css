@@ -1347,6 +1347,7 @@ hr.sepline {
 
 .breadcrumb-container .breadcrumb a {
   text-decoration: none;
+  color: #7f7d7c;
 }
 
 .breadcrumb-container .breadcrumb a:visited {
@@ -1572,7 +1573,7 @@ hr.sepline {
   }
 }
 
-.cart-title {
+.page-title {
   font-size: 2.1875em;
   text-align: center;
   letter-spacing: 0;
@@ -1825,5 +1826,52 @@ hr.sepline {
   .page-wrap .cart-footer .button {
     display: block;
   }
+}
+
+.login-form {
+  margin: 80px auto 0 auto;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  max-width: 500px;
+  height: 500px;
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  line-height: 35px;
+  color: #7f7d7c;
+}
+
+.login-form .login-title {
+  font-size: 25px;
+}
+
+.login-form .loginAP {
+  font-size: 26px;
+}
+
+.login-form .login-input {
+  height: 40px;
+  font-size: 20px;
+  padding-left: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #bfbfbf;
+}
+
+.login-form .login-submit {
+  cursor: pointer;
+  height: 40px;
+  color: white;
+  background-color: #998876;
+}
+
+.login-form .login-submit:hover {
+  opacity: 0.9;
 }
 /*# sourceMappingURL=style.css.map */

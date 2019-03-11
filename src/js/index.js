@@ -77,10 +77,10 @@ $(document).ready(function () {
   });
 
 
-  let productionsAll = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
-  let productionsMachine = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip.jpg" alt=""><span>Clip</span><div>$459</div></a></li>';
-  let productionsShoes = '<li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
-  let productionsFoods = '<li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
+  let productionsAll = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell250*280.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip250*280.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes250*280.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li><li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein250*280.jpg" alt=""><span>Protein</span><div>$1099</div></a></li><li><a href="../src/rope.html" class="productions-item"><img src="../src/images/rope250*280.jpeg" alt=""><span>Rope</span><div>$199</div></a></li>';
+  let productionsMachine = '<li><a href="../src/dumbbell.html" class="productions-item"><img src="../src/images/dumbbell250*280.jpg" alt=""><span>Dumbbell</span><div>$299</div></a></li><li><a href="../src/clip.html" class="productions-item"><img src="../src/images/clip250*280.jpg" alt=""><span>Clip</span><div>$459</div></a></li><li><a href="../src/rope.html" class="productions-item"><img src="../src/images/rope250*280.jpeg" alt=""><span>Rope</span><div>$199</div></a></li>';
+  let productionsShoes = '<li><a href="../src/shoes.html" class="productions-item"><img src="../src/images/shoes250*280.jpg" alt=""><span>Shoes</span><div>$1599</div></a></li>';
+  let productionsFoods = '<li><a href="../src/protein.html" class="productions-item"><img src="../src/images/protein250*280.jpg" alt=""><span>Protein</span><div>$1099</div></a></li>';
 
   $('#category-all').on('click', function (e) {
     e.preventDefault();
@@ -133,8 +133,6 @@ $(document).ready(function () {
     let cart = isCartEmpty();
     let curItem = $(this).parent().prevAll('.production-name-td').find('.production-name-a').text();
     let subtotalBefore = parseInt($(this).parents('.cart-table').next().find('.total').text().substr(1));
-
-    console.log(subtotalBefore);
 
     for (let i = 0; cart.length > 0; i++) {
       if (curItem === cart[i].name) {
@@ -202,7 +200,6 @@ $(document).ready(function () {
         cart[i].total = currItemQTY * cart[i].price;
         $(this).parent().next().children('div').text('$' + cart[i].total);
         localStorage.setItem('cart', JSON.stringify(cart));
-        console.log(cart);
         break;
       }
     }
@@ -268,8 +265,7 @@ $(document).ready(function () {
       let subtotal = subtotalArray.reduce((acc, cur) => acc + cur);
       $('.total').text('$' + subtotal);
     }
-
     $('.total').text();
-
   }
+  
 });

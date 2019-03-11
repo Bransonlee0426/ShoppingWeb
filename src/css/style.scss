@@ -1101,6 +1101,7 @@ hr.sepline {
 
     a {
       text-decoration: none;
+      color: #7f7d7c;
     }
 
     a:visited {
@@ -1285,7 +1286,7 @@ hr.sepline {
 }
 
 //cart.html
-.cart-title {
+.page-title {
   font-size: 2.1875em;
   text-align: center;
   letter-spacing: 0;
@@ -1507,5 +1508,40 @@ hr.sepline {
         display: block;
       }
     }
+  }
+}
+.login-form{
+  margin: 80px auto 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  max-width: 500px;
+  height: 500px;
+  box-shadow:0 4px 4px 0 rgba(0,0,0,0.2);
+  line-height: 35px;
+  color: #7f7d7c;
+  .login-title{
+    font-size: 25px;
+  }
+  .loginAP{
+    
+    font-size: 26px;
+  }
+  .login-input{
+    height: 40px;
+    font-size: 20px;
+    padding-left: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #bfbfbf;
+  }
+  .login-submit{
+    cursor: pointer;
+    height: 40px;
+    color: white;
+    background-color: #998876;
+  }
+  .login-submit:hover{
+    opacity: 0.9;
   }
 }
