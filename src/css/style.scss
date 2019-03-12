@@ -1510,7 +1510,7 @@ hr.sepline {
     }
   }
 }
-.login-form{
+.login-form {
   margin: 80px auto 0 auto;
   padding: 0 10px;
   display: flex;
@@ -1518,30 +1518,64 @@ hr.sepline {
   flex-wrap: nowrap;
   max-width: 500px;
   height: 500px;
-  box-shadow:0 4px 4px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
   line-height: 35px;
   color: #7f7d7c;
-  .login-title{
+  .login-title {
     font-size: 25px;
   }
-  .loginAP{
-    
+  .loginAP {
     font-size: 26px;
   }
-  .login-input{
+  .login-input {
     height: 40px;
     font-size: 20px;
     padding-left: 5px;
     margin-bottom: 20px;
     border: 1px solid #bfbfbf;
   }
-  .login-submit{
+  .login-submit {
     cursor: pointer;
     height: 40px;
     color: white;
     background-color: #998876;
   }
-  .login-submit:hover{
+  .login-submit:hover {
     opacity: 0.9;
   }
+}
+//dashboard
+
+.navbar {
+  min-height: 80px;
+  font-size: 1.2em;
+  a.text-white-50:hover,a.text-white-50:active {
+    color:white !important;
+  }
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+  /* (80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    /* (80px - line-height of 27px) / 2 = 26.5px */
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+}
+.container{
+  width: 64% !important; 
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
