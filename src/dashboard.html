@@ -33,7 +33,7 @@
 
 <body>
 
-    <nav class="navbar bg-dark justify-content-around">
+    <nav class="navbar bg-dark justify-content-between">
         <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link text-light" href="#">HOME</a>
@@ -70,6 +70,31 @@
                         <button class="dropdown-item btn-sm" type="button">Monthly</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="cards d-flex justify-content-between mt-4 font-weight-bold">
+            <div class="card align-items-center">
+                <div class="d-flex flex-column card-body align-items-center">
+                    <p><i class="fas fa-hand-holding-usd"></i>TOTAL REVENUE</p>
+                    <p class="text-success">54,540</p>
+                </div>
+            </div>
+            <div class="card align-items-center">
+                <div class="d-flex flex-column card-body align-items-center">
+                    <p><i class="fas fa-boxes"></i>TOTAL COST</p>
+                    <p class="text-danger">12,660</p>
+                </div>
+            </div>
+            <div class="card align-items-center">
+                <div class="d-flex flex-column card-body align-items-center">
+                    <p><i class="fas fa-money-bill"></i>NET INCOME</p>
+                    <p class="text-primary">41,880</p>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <canvas id="myChart" width="400" height="400"></canvas>
             </div>
         </div>
     </div>
