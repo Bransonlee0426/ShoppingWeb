@@ -94,7 +94,89 @@
         </div>
         <div class="card mt-4">
             <div class="card-body">
-                <canvas id="myChart" width="400" height="400"></canvas>
+                <h2 class="font-weight-bold align-middle">Activity</h2>
+                <canvas id="line-chart" width="800" height="450"></canvas>
+            </div>
+        </div>
+        <div class="db-footer d-flex justify-content-between">
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h2 class="font-weight-bold">Transaction Website</h2>
+                    <ul class="db-footer-ul d-flex flex-column pt-3 pl-2 align-items-start">
+                        <li class="d-flex flex-row align-items-center justify-content-between">
+                            <i class="fab fa-facebook fa-3x"></i>
+                            <span class="text-secondary">Facebook.com</span>
+                            <span class="font-weight-bold">45,231</span>
+                            <i class="fab fas fa-arrow-up green"></i>
+                            <span class="green">20%</span>
+                        </li>
+                        <li class="line"></li>
+                        <li class="d-flex flex-row align-items-center justify-content-between">
+                            <i class="fab fa-google fa-3x"></i>
+                            <span class="text-secondary">Google.com</span>
+                            <span class="font-weight-bold">31,201</span>
+                            <i class="fab fas fa-arrow-up green"></i>
+                            <span class="green">10%</span>
+                        </li>
+                        <li class="d-flex flex-row align-items-center justify-content-between">
+                            <i class="fab fa-yahoo fa-3x"></i>
+                            <span class="text-secondary">Yahoo.com</span>
+                            <span class="font-weight-bold">2,131</span>
+                            <i class="fab fas fa-arrow-down red"></i>
+                            <span class="red">2%</span>
+                        </li>
+                        <li class="d-flex flex-row align-items-center justify-content-between">
+                            <i class="fab fa-wordpress fa-3x"></i>
+                            <span class="text-secondary">Wordpress.com</span>
+                            <span class="font-weight-bold">132</span>
+                            <i class="fab fas fa-arrow-down red"></i>
+                            <span class="red">10%</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-lo card mt-4">
+                <div class="card-body flex-column">
+                    <h2 class="font-weight-bold">Latest Orders</h2>
+                    <ul class="lo-ul pt-3 pl-2">
+                        <li class="d-flex flex-row mb-1 justify-content-start">
+                            <img src="../src/images/clip100*100.jpeg" alt="">
+                            <div class="d-flex flex-column flex-grow-1 pl-4">
+                                <h2>Clip</h2>
+                                <span><i class="fas fa-clock mr-2"></i>2019/1/1 13:20</span>
+                                <span class="ml-1"><i class="fas fa-male mr-3"></i>Mr.Wang</span>
+                            </div>
+                            <div class="d-flex flex-column justify-content-end ">
+                                <span>Total</span>
+                                <span class="font-weight-bold">3,200</span>
+                            </div>
+                        </li>
+                        <li class="d-flex flex-row mb-1 justify-content-start">
+                            <img src="../src/images/rope100*100.jpeg" alt="">
+                            <div class="d-flex flex-column flex-grow-1 pl-4">
+                                <h2>Rope</h2>
+                                <span><i class="fas fa-clock mr-2"></i>2019/1/1 10:20</span>
+                                <span class="ml-1"><i class="fas fa-male mr-3"></i>Mr.Lee</span>
+                            </div>
+                            <div class="d-flex flex-column justify-content-end">
+                                <span>Total</span>
+                                <span class="font-weight-bold">2,200</span>
+                            </div>
+                        </li>
+                        <li class="d-flex flex-row mb-1 justify-content-start">
+                            <img src="../src/images/dumbbell100*100.jpeg" alt="">
+                            <div class="d-flex flex-column flex-grow-1 pl-4">
+                                <h2>Dumbbell</h2>
+                                <span><i class="fas fa-clock mr-2"></i>2019/1/1 09:20</span>
+                                <span class="ml-1"><i class="fas fa-male mr-3"></i>Mr.Chen</span>
+                            </div>
+                            <div class="d-flex flex-column justify-content-end">
+                                <span>Total</span>
+                                <span class="font-weight-bold">1,200</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -102,6 +184,8 @@
 <script type="text/javascript" src="../jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="../src/js/index.js"></script>
 <script type="text/javascript" src="../swiper.min.js"></script>
+<script type="text/javascript" src="../Chart.min.js"></script>
+<script type="text/javascript" src="../Chart.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"

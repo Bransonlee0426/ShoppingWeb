@@ -1912,6 +1912,11 @@ hr.sepline {
   padding-right: 0px !important;
 }
 
+.container .card {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
 .container .cards {
   font-size: 1.3em;
 }
@@ -1936,5 +1941,32 @@ hr.sepline {
 .container .cards .card:hover {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container .db-footer .card {
+  width: 500px;
+}
+
+.container .card-lo li {
+  width: 100%;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.green {
+  color: #92d048;
+}
+
+.red {
+  color: red;
+}
+
+.db-footer-ul {
+  line-height: 80px;
+}
+
+.db-footer-ul li {
+  width: 100%;
+  border-bottom: 1px solid #ebebeb;
 }
 /*# sourceMappingURL=style.css.map */
