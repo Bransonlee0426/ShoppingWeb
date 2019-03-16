@@ -186,7 +186,7 @@ $(document).ready(function () {
     }
     //放到localstorage裡面
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('item(s) added!')
+    alert($(this).parent().prevAll('.product-title').data('name') + ' added!')
   });
 
   $('.qty-input').on('click change', function () {
@@ -235,16 +235,17 @@ $(document).ready(function () {
 
       let productName = cart[i].name;
       let productPrice = cart[i].price;
+      console.log(productName);
       let productAmount = cart[i].amount;
       let productTotal = cart[i].price * cart[i].amount;
       var htmlString =
         '                <tr>' +
         '                    <td id="productimg-td">' +
-        '                        <div id="productimg"><a href="../src/' + productName + '.html"><img src="../src/images/' + productName + '95*95.jpeg"></a></div>' +
+        '                        <div id="productimg"><a href="../src/' + productName.toLowerCase() + '.html"><img src="../src/images/' + productName.toLowerCase() + '95*95.jpeg"></a></div>' +
         '                    </td>' +
         '                    <td class="production-name-td">' +
         '                        <div class="production-name">' +
-        '                            <a class="production-name-a" href="../src/' + productName + '.html">' + productName + '</a>' +
+        '                            <a class="production-name-a" href="../src/' + productName.toLowerCase() + '.html">' + productName + '</a>' +
         '                            <a class="remove-a">REMOVE</a>' +
         '                        </div>' +
         '                    </td>' +
