@@ -235,7 +235,6 @@ $(document).ready(function () {
 
       let productName = cart[i].name;
       let productPrice = cart[i].price;
-      console.log(productName);
       let productAmount = cart[i].amount;
       let productTotal = cart[i].price * cart[i].amount;
       var htmlString =
