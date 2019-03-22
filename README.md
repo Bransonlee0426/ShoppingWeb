@@ -2,7 +2,7 @@
 購物車網站
 
 #HTML5
-#CSS3
+#SASS
 #jQuery
 #javascript ES6
 #Bootstrap 4
