@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  
   const element = document.querySelector('.slidestitle')
   //Listeing media to fix the hover effect.
   let CurWidth = window.matchMedia("(max-width: 767px)");
@@ -24,6 +25,7 @@ $(document).ready(function () {
   $('#showmenu').click(function () {
     $(this).toggleClass('open');
   });
+
   let mySwiper1 = new Swiper('.swiper-container1', {
 
     // Optional parameters

@@ -1,9 +1,97 @@
 @mixin hide-text {
-    text-indent: 101%;
-    overflow: hidden;
-    white-space: nowrap;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin clearfix {
+  clear: both;
+}
+
+@mixin showmenu {
+  #showmenu {
+    width: 60px;
+    height: 45px;
+    top: 10px;
+    padding-left: 10px auto;
+    padding-top: 10px auto;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
   }
-  
-  @mixin clearfix {
-    clear: both;
+
+  #showmenu span {
+    left: 10px;
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 40px;
+    background: black;
+    border-radius: 9px;
+    opacity: 50;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out;
   }
+}
+
+@mixin showmenu_icon {
+  #showmenu span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #showmenu span:nth-child(2) {
+    top: 12px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #showmenu span:nth-child(3) {
+    top: 24px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+
+  #showmenu.open span:nth-child(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: -5px;
+    left: 15px;
+  }
+
+  #showmenu.open span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+  }
+
+  #showmenu.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    top: 24px;
+    left: 15px;
+  }
+}
