@@ -7,6 +7,7 @@
 #javascript ES6
 #Bootstrap 4
 #RWD
+＊建議使用 chrome 瀏覽器
 
 ・運用 Flexbox 及 Grid 規劃響應式網頁版型。
 
